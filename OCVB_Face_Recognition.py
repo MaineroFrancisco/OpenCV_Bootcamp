@@ -25,7 +25,7 @@ def download_and_unzip(url, save_path):
 
 URL = r"https://www.dropbox.com/s/efitgt363ada95a/opencv_bootcamp_assets_12.zip?dl=1"
 
-asset_zip_path = os.path.join(os.getcwd(), f"opencv_bootcamp_assets_12.zip")
+asset_zip_path = os.path.join(os.getcwd(), f"assets/opencv_bootcamp_assets_12.zip")
 
 # Download if assest ZIP does not exists.
 if not os.path.exists(asset_zip_path):
@@ -42,7 +42,7 @@ source = cv2.VideoCapture(s)
 win_name = "Camera Preview"
 cv2.namedWindow(win_name, cv2.WINDOW_NORMAL)
 
-net = cv2.dnn.readNetFromCaffe("deploy.prototxt", "res10_300x300_ssd_iter_140000_fp16.caffemodel")
+net = cv2.dnn.readNetFromCaffe("assets/deploy.prototxt", "assets/res10_300x300_ssd_iter_140000_fp16.caffemodel")
 # Model parameters
 in_width = 300
 in_height = 300
